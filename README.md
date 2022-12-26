@@ -28,7 +28,7 @@ This code was tested in the following configuration:
 
 ## Training 
 
-- Download training dataset from https://drive.google.com/file/d/1WVTgEBZgYyHNa2iVLUYwcrGWZ4LcN4--/view?usp=sharing and unzip ```DRUNET``` in a ```somewhere/datasets``` folder. *Important:* Update the path accordingly [here](https://github.com/matthieutrs/training_FNE_denoisers_dana/blob/main/train_denoisers/data_module.py#L120).
+- Download training dataset from https://drive.google.com/file/d/1WVTgEBZgYyHNa2iVLUYwcrGWZ4LcN4--/view?usp=sharing and unzip ```DRUNET``` in a ```somewhere/datasets``` folder. *Important:* Update the path accordingly [here](https://github.com/matthieutrs/LMMO_lightning/blob/main/data_module.py#L120).
 
 - To train with the regularised loss:
 ```
@@ -47,7 +47,7 @@ tensorboard --logdir .
 If launching on a server, forward this to the appropriate port with the `--port ` argument in the above command.
 
 ### Exporting the trained weights to a standard state_dict
-Saved checkpoints (`.ckpt` files) follow the structure of a (DenoisingModel)[] class. In order to export them to a standard `state_dict` torch nomenclature (more versatile), you can use the template `save_dict.py` code.
+Saved checkpoints (`.ckpt` files) follow the structure of a [DenoisingModel](https://github.com/matthieutrs/LMMO_lightning/blob/main/lightning_denoiser.py#L21) class. In order to export them to a standard `state_dict` torch nomenclature (more versatile), you can use the template `save_dict.py` code.
 
 ## Acknowledgments
 This repo contains parts of code taken from : 

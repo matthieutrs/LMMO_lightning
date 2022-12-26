@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser.add_argument('--optimizer_lr', type=float, default=1e-4)
     parser.add_argument('--loss_name', type=str, default='l2')
     parser.add_argument('--save_images', dest='save_images', action='store_true')
-    parser.add_argument('--log_folder', type=str, default='/scratch/space1/dc153/logs_experiments/logs_LMMO/')
+    parser.add_argument('--log_folder', type=str, default='path/to/logs')
     parser.add_argument('--pretrained_checkpoint', default=None)  # 'ckpts/GS_DRUNet_new.ckpt'
     parser.add_argument('--act_mode', type=str, default='s')  # Nonlinearities
     parser.add_argument('--min_sigma_train', type=int, default=180)

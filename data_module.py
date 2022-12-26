@@ -117,7 +117,7 @@ class DataModule(pl.LightningDataModule):
     def add_data_specific_args(parent_parser):
         parser = ArgumentParser(parents=[parent_parser], add_help=False)
         parser.add_argument('--dataset_name', type=str, default='CBSD68')
-        parser.add_argument('--dataset_path', type=str, default='/scratch/space1/dc153/data/')  # '../datasets/' Original
+        parser.add_argument('--dataset_path', type=str, default='/path/to/data/')  # '../datasets/' Original
         parser.add_argument('--test_patch_size', type=int, default=128)
         parser.add_argument('--train_shuffle', dest='train_shuffle', action='store_true')
         parser.add_argument('--no-train_shuffle', dest='train_shuffle', action='store_false')
