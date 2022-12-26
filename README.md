@@ -1,6 +1,6 @@
 # Training firmly nonexpansive denoisers
 
-This repository is an updated version of [our old training codes](https://github.com/basp-group/PnP-MMO-imaging) based on the training framework and dataset of [Hurault et al](https://github.com/samuro95/GSPnP).
+This repository is an updated version of [our training codes](https://github.com/basp-group/PnP-MMO-imaging) based on the training framework and dataset of [Hurault et al](https://github.com/samuro95/GSPnP).
 
 ## Summary
 We train a denoiser while imposing a firm-nonexpansiveness penalization through a Jacobian regularization term.
@@ -9,8 +9,8 @@ The Lipschitz constant of `Q` is estimated via the spectral norm of its Jacobian
 
 New weights for a DnCNN trained with small noise level (2.0/255.) are currently available [here](https://drive.google.com/drive/folders/1A6SN5yZEiXxzdp-NKtEGB4ZutBI7t0ea).
 
-This repository only focuses on training denoisers; for the PnP algorithm, we refer you to [our old code](https://github.com/basp-group/PnP-MMO-imaging). 
-However, a small [google colab notebook](https://colab.research.google.com/drive/1pVNl4VhDLaYMC7KOyL8f7Zyv-zygM4vK#scrollTo=QlNANCmQkbUu) with a toy example is available online.
+This repository only focuses on training denoisers; for the PnP algorithm, we refer you to [our older code](https://github.com/basp-group/PnP-MMO-imaging). 
+However, a small **google colab notebook** with a demo PnP-FB example is available online. Try it out [here](https://colab.research.google.com/drive/1pVNl4VhDLaYMC7KOyL8f7Zyv-zygM4vK#scrollTo=QlNANCmQkbUu)!
 
 **Link to paper: [https://arxiv.org/pdf/2012.13247.pdf](https://arxiv.org/pdf/2012.13247.pdf)**
 
