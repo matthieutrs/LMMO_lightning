@@ -71,6 +71,6 @@ This code is based on the following work:
 }
 ```
 
-Don't hesitate to [contact me](matthieu.terris@gmail.com) if you have any question!
+Don't hesitate to contact me if you have any question!
 
 **License:** GNU General Public License v3.0.
