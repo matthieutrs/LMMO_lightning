@@ -71,20 +71,6 @@ This code is based on the following work:
 }
 ```
 
-We have also relied on the work of [Hurault et al](https://github.com/samuro95/GSPnP).
-```
-@inproceedings{
-  hurault2022gradient,
-  title={Gradient Step Denoiser for convergent Plug-and-Play},
-  author={Samuel Hurault and Arthur Leclaire and Nicolas Papadakis},
-  booktitle={International Conference on Learning Representations},
-  year={2022},
-  url={https://openreview.net/forum?id=fPhKeld3Okz}
-}
-```
-
-Don't hesitate to contact me<sup>[*](#footnote)</sup> if you have any question!
+Don't hesitate to [contact me](matthieu.terris@gmail.com) if you have any question!
 
 **License:** GNU General Public License v3.0.
-
-<a name="footnote"><sup>*</sup></a> matthieu.terris@gmail.com
