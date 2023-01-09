@@ -39,11 +39,11 @@ if __name__ == '__main__':
         parser.add_argument('--gradient_clip_val', type=float, default=1e-2)
         parser.add_argument('--scheduler_milestones', type=int, nargs='+', default=[365, 365*2, 365*3, 365*4, 365*5, 365*6, 365*7, 365*8])
         parser.add_argument('--scheduler_gamma', type=float, default=0.5)
-    elif 'DNCNN' in known_namespace.model_name:
+    else:
         parser.add_argument('--batch_size_train', type=int, default=128)
         parser.add_argument('--train_patch_size', type=int, default=64)
         parser.add_argument('--gradient_clip_val', type=float, default=1e-2)
-        parser.add_argument('--scheduler_milestones', type=int, nargs='+', default=[365, 365*2, 365*3, 365*4, 365*5, 365*6, 365*7, 365*8])
+        parser.add_argument('--scheduler_milestones', type=int, nargs='+', default=[2920, 2920*2, 2920*3, 2920*4, 2920*5, 2920*6, 2920*7, 2920*8])
         parser.add_argument('--scheduler_gamma', type=float, default=0.5)
     if 'BF' in known_namespace.model_name:
         parser.set_defaults(bias=False)
@@ -116,6 +116,3 @@ if __name__ == '__main__':
                                             callbacks=[lr_monitor], strategy='ddp', log_every_n_steps=1)
 
     trainer.fit(model, dm, ckpt_path=hparams.pretrained_checkpoint)
-
-
-

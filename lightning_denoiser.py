@@ -13,7 +13,7 @@ except:
 from argparse import ArgumentParser
 import cv2
 import torchvision
-from test_utils import test_mode
+from models.test_utils import test_mode
 from models.network_unet import UNetRes
 from models.DNCNN import DnCNN, weights_init_kaiming
 
@@ -74,8 +74,7 @@ class Denoiser(pl.LightningModule):
         self.denoiser = DenoisingModel(self.hparams.model_name, self.hparams.pretrained_student,
                                        self.hparams.pretrained_checkpoint, self.hparams.act_mode,
                                        self.hparams.DRUNet_nb, self.hparams.bias,
-                                       nc_in=self.hparams.nc_in, nc_out=self.hparams.nc_out,
-                                       filt_shape=self.hparams.filt_shape, num_filt=self.hparams.num_filt)
+                                       nc_in=self.hparams.nc_in, nc_out=self.hparams.nc_out)
         if 'GS_' in self.hparams.model_name:
             self.hparams.grad_matching = True
         self.train_PSNR = PSNR(data_range=1.0)
@@ -89,10 +88,7 @@ class Denoiser(pl.LightningModule):
         :param sigma: Denoiser level (std)
         :return: Denoised image x_hat, Dg(x) gradient of the regularizer g at x
         '''
-        if 'DNCNN' in self.denoiser.model_name or 'QNN' in self.denoiser.model_name:
-            x_hat = self.denoiser.forward(x, sigma)
-        elif 'DRUNet' in self.denoiser.model_name:
-            x_hat = self.denoiser.forward(x, sigma)
+        x_hat = self.denoiser.forward(x, sigma)
         Dg = x - x_hat
         return x_hat, Dg
 
